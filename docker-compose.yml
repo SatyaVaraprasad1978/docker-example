@@ -15,9 +15,9 @@ services:
   movie-app-image:
     networks:
       - backend
-    image: movie-app-image
+    image: varaprasadvs/spring-mongodb-docker:0.0.1
     container_name: movie-app-image
     ports:
-      - 8080:8080
+      - 8081:8081
     links:
       - mymoviedb
