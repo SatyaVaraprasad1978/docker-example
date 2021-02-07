@@ -1,23 +1,23 @@
-version: "3.8"
+version: "3.3"
 
-networks:
-  backend:
-    external: false
-    name: backend
+#networks:
+ # backend:
+  #  external: false
+   # name: backend
 services:
   mymoviedb:
-    networks:
-      - backend
+    #networks:
+     # - backend
     image: mongo:latest
     container_name: mymoviedb
     ports:
       - 27017:27017
   movie-app-image:
-    networks:
-      - backend
+    #networks:
+     # - backend
     image: varaprasadvs/spring-mongodb-docker:0.0.1
     container_name: movie-app-image
     ports:
-      - 8081:8081
+      - 8081:8080
     links:
       - mymoviedb
